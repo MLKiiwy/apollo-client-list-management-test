@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MLKiiwy/apollo-client-list-management-test.git",
+    "directory": "packages/server"
+  },
+  "scripts": {
+    "start": "nodemon --inspect ./src/index.js 80"
+  }
+}

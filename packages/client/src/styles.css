@@ -1,0 +1,11 @@
+.App {
+  font-family: sans-serif;
+}
+
+body > iframe {
+  display: none !important;
+}
+
+.element--optimistic-ui {
+  color: blue;
+}
