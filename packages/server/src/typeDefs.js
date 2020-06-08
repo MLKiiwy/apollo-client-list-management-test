@@ -1,22 +1,22 @@
 const { gql } = require('apollo-server');
 
 const typeDefs = gql`
-    type FormElement {
+    type Element {
     id: Int!
     text: String!
     }
 
-    type FormStructure {
+    type Structure {
     id: String!
-    elements: [FormElement!]
+    elements: [Element!]
     }
 
-    type Form {
+    type List {
     id: String!
-    structure: FormStructure!
+    structure: Structure!
     }
 
-    input CreateFormElementInput {
+    input CreateElementInput {
     id: Int!
     delay: Int
     error: Boolean
@@ -24,19 +24,19 @@ const typeDefs = gql`
     text: String!
     }
 
-    input ModifyFormElementInput {
+    input ModifyElementInput {
     delay: Int
     error: Boolean
     text: String!
     }
 
     type Query {
-    form: Form
+    list: List
     }
 
     type Mutation {
-    addFormElement(input: CreateFormElementInput!): FormStructure
-    modifyFormElement(id: Int!, input: ModifyFormElementInput!): FormElement
+    addElement(input: CreateElementInput!): Structure
+    modifyElement(id: Int!, input: ModifyElementInput!): Element
     }
 `;
 
