@@ -20,7 +20,7 @@ const GET_FORM = gql`
 `;
 
 const ADD_FORM_ELEMENT = gql`
-  mutation AddFormElement($input: CreateFormElementInput!) {
+  mutation AddFormElement($input: CreateFormElementInput!) @queue(name: "form_elements") {
     addFormElement(input: $input) {
       id
       elements {
@@ -33,7 +33,7 @@ const ADD_FORM_ELEMENT = gql`
 `;
 
 const MODIFY_FORM_ELEMENT = gql`
-  mutation ModifyFormElement($id: Int!, $input: ModifyFormElementInput!) {
+  mutation ModifyFormElement($id: Int!, $input: ModifyFormElementInput!) @queue(name: "form_elements") {
     modifyFormElement(id: $id, input: $input) {
       id
       text

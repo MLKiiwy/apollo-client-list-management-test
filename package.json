@@ -24,7 +24,8 @@
     "graphql": "^15.0.0",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "zen-observable": "^0.8.15"
   },
   "scripts": {
     "start": "lerna run start"
